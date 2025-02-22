@@ -1,0 +1,120 @@
+.alert-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100px;
+  z-index: 999;
+}
+
+.alert-progress{
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0%;
+  height: 51px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.055) 0%, rgba(255,255,255,0.25) 100%);
+  border-radius:  23px;
+  transition-duration: !important;
+  transition-timing-function: ease-out;
+  filter: blur(5px);
+}
+
+.alert-progress-full{
+  width: 100%;
+}
+
+.alert-overlay .message {
+  margin: 0 auto;
+  width: 450px;
+  margin-top: -80px;
+  padding: 16px 52px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 24px;
+  background-color: !important;
+  color: #fff;
+  user-select: none;
+  transition-duration:  !important;
+  transition-timing-function: ease-out;
+  opacity: 0;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25), 0 -10px 10px rgba(0, 0, 0, 0.05), 0 -10px 10px rgba(0, 0, 0, 0.03) inset, 0 10px 10px rgba(0, 0, 0, 0.03) inset;
+}
+
+@media (max-width: 1340px) {
+  .alert-overlay .message {
+    width: 95%;
+  }
+}
+
+.alert-overlay .alert-icon{
+  position: absolute;
+  top: 13px;
+  left: 20px;
+}
+.alert-overlay .alert-close{
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  cursor: pointer;
+}
+.alert-overlay .alert-close:hover{
+
+}
+.message-show {
+  transform: translate(0, 105px);
+}
+
+
+.cookies {
+  color: #000;
+  background-color: #fadb26;
+  font-weight: 500;
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 18px 25px;
+  position: fixed;
+  bottom: 11px;
+  left: 12px;
+  user-select: none;
+  cursor: pointer;
+  transition: 800ms;
+  opacity: 1;
+}
+.cookies-hidden{
+  transform: translate(-295px);
+  opacity: 0;
+}
+.cookies::before {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-right: 10px solid #fadb26;
+  top: 20px;
+  left: -20px;
+  transition: 300ms;
+}
+.cookies:hover {
+  background-color: #ffea28;
+}
+.cookies:hover::before {
+  border-right: 10px solid #ffea28;
+}
+.cookies:active {
+  background-color: #fabf26;
+}
+.cookies:active::before {
+  border-right: 10px solid #fabf26;
+}
+
+@media (max-width: 518px) {
+  .cookies {
+    padding: 15px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    text-align: left;
+    box-shadow: none;
+  }
+}
